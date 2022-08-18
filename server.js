@@ -2,7 +2,7 @@
 const express = require("express");
 const path = require("path");
 // internal imports
-const routes = require("./routes");
+const routes = require("./routes ");
 // create express instance for app
 const app = express();
 // declare port

@@ -1,6 +1,7 @@
 // import express using a router class
 const { Router } = require("express");
-const getDataFromDB = require("../utils/getFromDB");
+const { getNotes, deleteNotes, createNotes } = require("../utils/getFromDB");
+const { v4: uuidv4 } = require("uuid");
 // import controller functions from api file
 
 // MOVE THESE FUNCTIONS HERE LATER
@@ -10,13 +11,30 @@ const getDataFromDB = require("../utils/getFromDB");
 const router = Router();
 //routers with middleware functions
 router.get("/", (req, res) => {
-  const notes = getDataFromDB();
-
+  const notes = getNotes();
   res.json(notes);
 });
 
-router.delete("/:id", (req, res) => {});
+router.delete("/:id", (req, res) => {
+  const id = req.body.id;
+  deleteNotes(id);
 
-router.post("/", (req, res) => {});
+  return res.json({ status: success });
+});
+
+router.post("/", (req, res) => {
+  const id = uuidv4();
+
+  const note = {
+    id: id,
+    title: req.body.title,
+    text: req.body.text,
+  };
+
+  createNotes(note);
+
+  return res.json(note);
+});
+
 // export file
 module.exports = router;

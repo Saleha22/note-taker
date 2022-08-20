@@ -16,10 +16,10 @@ router.get("/", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  const id = req.body.id;
-  deleteNotes(id);
+  const id = req.params.id;
+  const data = deleteNotes(id);
 
-  return res.json({ status: success });
+  return res.json(data);
 });
 
 router.post("/", (req, res) => {

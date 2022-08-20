@@ -22,15 +22,17 @@ const getNotes = () => {
 
 const deleteNotes = (id) => {
   // use the id from the param to delete it
+  const note_id = id;
+  console.log("note_id: " + note_id);
 
   // get notes from file
-  const notesData = readDataFromFile();
+  const notesData = getNotes();
   // filter array and remove note from array
   const filteredNotes = notesData.filter((note) => note.id !== id);
   // write back to data file
-  writeDataToFile(filteredNotes);
+  writeToFile(filteredNotes);
   // return response
-  return res.json(notesData);
+  return filteredNotes;
 };
 
 const createNotes = (note) => {

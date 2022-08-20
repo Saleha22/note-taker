@@ -1,1 +1,12 @@
-[{"id":"072a18e6-8b0f-454b-a526-6d57a69659a5","title":"Test Title","text":"Test text"},{"id":"7062068b-14c1-4f41-b705-20dcd4e07e68","title":"My title","text":"This is some text regarding the note"},{"id":"f51cbee1-4cce-480e-9323-05e394555a4f","title":"MY NEW NOTE","text":"ASDADWDAWD W DAW DAWD AW D WADAW DWA DAWD AWDAWDWA"}]
+[
+  {
+    "id": "b3280ee6-78aa-48ba-af92-63b84d401bf4",
+    "title": "My title1",
+    "text": "This is some text regarding the note"
+  },
+  {
+    "id": "801b5824-fde3-4787-ba77-60b956100f14",
+    "title": "adbawkdbawd",
+    "text": "awdawdawdawdawdaw wa daw dad wa da"
+  }
+]
